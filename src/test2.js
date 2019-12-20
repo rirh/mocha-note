@@ -17,8 +17,28 @@
  *   ]
  */
 module.exports = function (nums) {
-    let result = [-1,0,1];
+    let result = [];
     //TODO
+    for (let index = 0; index < nums.length; index++) {
+        const x = nums[index];
+        const left = nums.slice(0, index);
+        const right = nums.slice(index, -1);
+        if (left.length && right.length) {
+            for (let i = 0; i < left.length; i++) {
+                const y = left[i];
+                for (let j = 0; j < right.length; j++) {
+                    const z = right[j];
+                    const isuit = x + y + z === 0;
+                    if (isuit) {
+                        result.push([x, y, z].sort(function (a, b) { return a - b }))
+                    }
+                }
+
+            }
+        }
+    }
+    console.log(result);
+
 
     return result;
 }
