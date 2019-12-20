@@ -1,0 +1,20 @@
+{
+  "name": "mocha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test1": "mocha /test/*.js"
+  },
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^6.2.2",
+    "supertest": "^4.0.2"
+  }
+}
