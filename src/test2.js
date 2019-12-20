@@ -21,8 +21,8 @@ module.exports = function (nums) {
     //TODO
     for (let index = 0; index < nums.length; index++) {
         const x = nums[index];
-        const left = nums.slice(0, index);
-        const right = nums.slice(index, -1);
+        const left = nums.slice(0, index );
+        const right = nums.slice(index , -1);
         if (left.length && right.length) {
             for (let i = 0; i < left.length; i++) {
                 const y = left[i];
@@ -37,8 +37,17 @@ module.exports = function (nums) {
             }
         }
     }
-    console.log(result);
 
-
+    // 二维数组去重复
+    const hash = {};
+    const arr = []
+    for (let index = 0; index < result.length; index++) {
+        const element = result[index];
+        if (!hash[element]) {
+            hash[element] = true;
+            arr.push(element);
+        }
+    }
+    result = arr;
     return result;
 }
