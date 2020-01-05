@@ -49,7 +49,7 @@ describe("test match ", function () {
 describe("test async API", function () {
     it('statusCode should be 200 ', function (done) {
         request
-            .get('http://api.huzhihui.org.cn/doc')
+            .get('https://api.huzhihui.org.cn/doc')
             .end(function (err, res) {
                 expect(res.statusCode).to.be.equal(200);
                 done();
